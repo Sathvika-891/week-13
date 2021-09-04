@@ -1,0 +1,35 @@
+<!--limit character input in the textareausing count-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		To limit characters
+	</title>
+	<script src="C:\Users\RGUKT-N\Desktop\CSE\E-2 SEM-2\WT LAB\jquery.js">
+	</script>
+	<script>
+		$(document).ready(function () {
+			var max_length = 10;
+            $('textarea').keyup(function () {
+                var count = max_length - $(this).val().length;
+                $('.lim').text(count);
+
+            });
+		}
+		)
+	</script>
+</head>
+<body style="text-align: center;">
+	<h1>To limit the no.of characters</h1>
+	<form>      
+	<p>Maximum input characters: 10</p>
+	<textarea maxlength="10"></textarea>
+    <p>
+        <span class="lim">10</span> 
+        Characters Remaining
+    </p>
+  
+    </form>
+</body>
+</html>
